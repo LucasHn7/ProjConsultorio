@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEspecialidade));
             this.lblEspecialidade = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtEspecialidade = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.lblId = new System.Windows.Forms.Label();
             this.GridEspecialidade = new System.Windows.Forms.DataGridView();
@@ -49,12 +49,12 @@
             this.lblEspecialidade.TabIndex = 46;
             this.lblEspecialidade.Text = "Especialidade";
             // 
-            // txtNome
+            // txtEspecialidade
             // 
-            this.txtNome.Location = new System.Drawing.Point(89, 34);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(359, 20);
-            this.txtNome.TabIndex = 1;
+            this.txtEspecialidade.Location = new System.Drawing.Point(89, 34);
+            this.txtEspecialidade.Name = "txtEspecialidade";
+            this.txtEspecialidade.Size = new System.Drawing.Size(359, 20);
+            this.txtEspecialidade.TabIndex = 1;
             // 
             // txtId
             // 
@@ -74,11 +74,15 @@
             // 
             // GridEspecialidade
             // 
+            this.GridEspecialidade.AllowUserToAddRows = false;
+            this.GridEspecialidade.AllowUserToDeleteRows = false;
             this.GridEspecialidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridEspecialidade.Location = new System.Drawing.Point(7, 104);
             this.GridEspecialidade.Name = "GridEspecialidade";
+            this.GridEspecialidade.ReadOnly = true;
             this.GridEspecialidade.Size = new System.Drawing.Size(441, 196);
             this.GridEspecialidade.TabIndex = 47;
+            this.GridEspecialidade.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridEspecialidade_CellClick);
             // 
             // btnExcluir
             // 
@@ -88,6 +92,7 @@
             this.btnExcluir.TabIndex = 4;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnAlterar
             // 
@@ -97,6 +102,7 @@
             this.btnAlterar.TabIndex = 3;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnInserir
             // 
@@ -106,6 +112,7 @@
             this.btnInserir.TabIndex = 2;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // FormEspecialidade
             // 
@@ -118,7 +125,7 @@
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.GridEspecialidade);
             this.Controls.Add(this.lblEspecialidade);
-            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.txtEspecialidade);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblId);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -127,6 +134,7 @@
             this.Name = "FormEspecialidade";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEspecialidade";
+            this.Load += new System.EventHandler(this.FormEspecialidade_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridEspecialidade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -136,7 +144,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblEspecialidade;
-        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtEspecialidade;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.DataGridView GridEspecialidade;

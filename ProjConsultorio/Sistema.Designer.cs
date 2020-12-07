@@ -36,6 +36,8 @@
             this.msMedico = new System.Windows.Forms.ToolStripMenuItem();
             this.msEspeciadade = new System.Windows.Forms.ToolStripMenuItem();
             this.msConsulta = new System.Windows.Forms.ToolStripMenuItem();
+            this.msManutencao = new System.Windows.Forms.ToolStripMenuItem();
+            this.msUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.msSair = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
@@ -56,7 +58,8 @@
             // msSistema
             // 
             this.msSistema.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.msCadastro});
+            this.msCadastro,
+            this.msManutencao});
             this.msSistema.Image = ((System.Drawing.Image)(resources.GetObject("msSistema.Image")));
             this.msSistema.Name = "msSistema";
             this.msSistema.Size = new System.Drawing.Size(76, 20);
@@ -78,7 +81,7 @@
             // 
             this.msPaciente.Image = ((System.Drawing.Image)(resources.GetObject("msPaciente.Image")));
             this.msPaciente.Name = "msPaciente";
-            this.msPaciente.Size = new System.Drawing.Size(180, 22);
+            this.msPaciente.Size = new System.Drawing.Size(139, 22);
             this.msPaciente.Text = "Paciente";
             this.msPaciente.Click += new System.EventHandler(this.msPaciente_Click);
             // 
@@ -86,7 +89,7 @@
             // 
             this.msMedico.Image = ((System.Drawing.Image)(resources.GetObject("msMedico.Image")));
             this.msMedico.Name = "msMedico";
-            this.msMedico.Size = new System.Drawing.Size(180, 22);
+            this.msMedico.Size = new System.Drawing.Size(139, 22);
             this.msMedico.Text = "Medico";
             this.msMedico.Click += new System.EventHandler(this.msMedico_Click);
             // 
@@ -94,7 +97,7 @@
             // 
             this.msEspeciadade.Image = ((System.Drawing.Image)(resources.GetObject("msEspeciadade.Image")));
             this.msEspeciadade.Name = "msEspeciadade";
-            this.msEspeciadade.Size = new System.Drawing.Size(180, 22);
+            this.msEspeciadade.Size = new System.Drawing.Size(139, 22);
             this.msEspeciadade.Text = "Especiadade";
             this.msEspeciadade.Click += new System.EventHandler(this.msEspeciadade_Click);
             // 
@@ -102,9 +105,26 @@
             // 
             this.msConsulta.Image = ((System.Drawing.Image)(resources.GetObject("msConsulta.Image")));
             this.msConsulta.Name = "msConsulta";
-            this.msConsulta.Size = new System.Drawing.Size(180, 22);
+            this.msConsulta.Size = new System.Drawing.Size(139, 22);
             this.msConsulta.Text = "Consulta";
             this.msConsulta.Click += new System.EventHandler(this.msConsulta_Click);
+            // 
+            // msManutencao
+            // 
+            this.msManutencao.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.msUsuario});
+            this.msManutencao.Image = ((System.Drawing.Image)(resources.GetObject("msManutencao.Image")));
+            this.msManutencao.Name = "msManutencao";
+            this.msManutencao.Size = new System.Drawing.Size(180, 22);
+            this.msManutencao.Text = "Manutenção";
+            // 
+            // msUsuario
+            // 
+            this.msUsuario.Image = ((System.Drawing.Image)(resources.GetObject("msUsuario.Image")));
+            this.msUsuario.Name = "msUsuario";
+            this.msUsuario.Size = new System.Drawing.Size(180, 22);
+            this.msUsuario.Text = "Usuário";
+            this.msUsuario.Click += new System.EventHandler(this.msUsuario_Click);
             // 
             // msSair
             // 
@@ -135,6 +155,7 @@
             this.MaximumSize = new System.Drawing.Size(646, 458);
             this.MinimumSize = new System.Drawing.Size(646, 458);
             this.Name = "Sistema";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultório";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -155,6 +176,8 @@
         private System.Windows.Forms.ToolStripMenuItem msConsulta;
         private System.Windows.Forms.ToolStripMenuItem msSair;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem msManutencao;
+        private System.Windows.Forms.ToolStripMenuItem msUsuario;
     }
 }
 

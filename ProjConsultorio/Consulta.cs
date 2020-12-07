@@ -15,14 +15,13 @@ namespace ProjConsultorio
         public int IdConsulta { get; set; }
         [ForeignKey("Paciente")]
         public int IdPaciente { get; set; }
-        public Paciente Paciente { get; set; }
         [ForeignKey("Medico")]
         public int IdMedico { get; set; }
-        public Medico Medico { get; set; }
         public DateTime Data { get; set; }
         public double Valor { get; set; }
         public string Diagnostico { get; set; }
         public string Exame { get; set; }
-
+        public Paciente Paciente { get; set; }
+        public Medico Medico { get; set; }
     }
 }

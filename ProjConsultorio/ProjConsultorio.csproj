@@ -45,6 +45,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,12 +58,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\Correios\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Consulta.cs" />
     <Compile Include="Contexto.cs" />
     <Compile Include="DbConsultorioDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DbConsultorioDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbConsultorioDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbConsultorioDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbConsultorioDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbConsultorioDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbConsultorioDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbConsultorioDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbConsultorioDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbConsultorioDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbConsultorioDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbConsultorioDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbConsultorioDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbConsultorioDataSet6.xsd</DependentUpon>
     </Compile>
     <Compile Include="Especialidad.cs" />
     <Compile Include="FormConsulta.cs">
@@ -76,6 +113,12 @@
     <Compile Include="FormEspecialidade.Designer.cs">
       <DependentUpon>FormEspecialidade.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMedico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +130,51 @@
     </Compile>
     <Compile Include="FormPaciente.Designer.cs">
       <DependentUpon>FormPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginAdm.Designer.cs">
+      <DependentUpon>LoginAdm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManutencaoUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManutencaoUser.Designer.cs">
+      <DependentUpon>ManutencaoUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManutUser.cs" />
+    <Compile Include="Migrations\202010251714556_banco1.cs" />
+    <Compile Include="Migrations\202010251714556_banco1.designer.cs">
+      <DependentUpon>202010251714556_banco1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010251719212_banco2.cs" />
+    <Compile Include="Migrations\202010251719212_banco2.designer.cs">
+      <DependentUpon>202010251719212_banco2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010251914303_banco3.cs" />
+    <Compile Include="Migrations\202010251914303_banco3.designer.cs">
+      <DependentUpon>202010251914303_banco3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010252056455_banco4.cs" />
+    <Compile Include="Migrations\202010252056455_banco4.designer.cs">
+      <DependentUpon>202010252056455_banco4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010252148231_banco5.cs" />
+    <Compile Include="Migrations\202010252148231_banco5.designer.cs">
+      <DependentUpon>202010252148231_banco5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010252239325_banco6.cs" />
+    <Compile Include="Migrations\202010252239325_banco6.designer.cs">
+      <DependentUpon>202010252239325_banco6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011071858110_banco7.cs" />
+    <Compile Include="Migrations\202011071858110_banco7.designer.cs">
+      <DependentUpon>202011071858110_banco7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011072008531_banco8.cs" />
+    <Compile Include="Migrations\202011072008531_banco8.designer.cs">
+      <DependentUpon>202011072008531_banco8.cs</DependentUpon>
     </Compile>
     <Compile Include="Sistema.cs">
       <SubType>Form</SubType>
@@ -109,11 +197,44 @@
     <EmbeddedResource Include="FormEspecialidade.resx">
       <DependentUpon>FormEspecialidade.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMedico.resx">
       <DependentUpon>FormMedico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPaciente.resx">
       <DependentUpon>FormPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginAdm.resx">
+      <DependentUpon>LoginAdm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManutencaoUser.resx">
+      <DependentUpon>ManutencaoUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010251714556_banco1.resx">
+      <DependentUpon>202010251714556_banco1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010251719212_banco2.resx">
+      <DependentUpon>202010251719212_banco2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010251914303_banco3.resx">
+      <DependentUpon>202010251914303_banco3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010252056455_banco4.resx">
+      <DependentUpon>202010252056455_banco4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010252148231_banco5.resx">
+      <DependentUpon>202010252148231_banco5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010252239325_banco6.resx">
+      <DependentUpon>202010252239325_banco6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011071858110_banco7.resx">
+      <DependentUpon>202011071858110_banco7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011072008531_banco8.resx">
+      <DependentUpon>202011072008531_banco8.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sistema.resx">
       <DependentUpon>Sistema.cs</DependentUpon>
@@ -130,6 +251,172 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Connected Services\Correios\AtendeClienteService.wsdl" />
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.atualizaPagamentoNaEntregaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.atualizaRemessaAgrupadaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.bloquearObjetoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.buscaClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.buscaContratoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.buscaDataAtualResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.buscaOpcoesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.buscaPagamentoEntregaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.buscaServicosAdicionaisAtivosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.buscaServicosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.buscaServicosValorDeclaradoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.buscaServicosXServicosAdicionaisResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.buscaTarifaValeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.calculaTarifaServicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.cancelarObjetoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.cancelarPedidoScolResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.clienteERP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.consultaCEPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.contratoERP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.dimensaoTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.embalagemLRSMaster.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.enderecoERP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.fechaPlpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.fechaPlpVariosServicosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.geraDigitoVerificadorEtiquetasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.getStatusCartaoPostagemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.getStatusPLPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.integrarUsuarioScolResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.mensagemParametrizadaTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.obterClienteAtualizacaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.obterEmbalagemLRSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.obterMensagemParametrizadaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.pesquisarDimensoesServicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.pesquisarEmbalagensPorServicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.pesquisarParametrosPorDescricaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.pesquisarServicosAdicionaisResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.retornoCancelamento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.servicoAdicionalTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.servicoAdicionalXML.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.servicoERP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.solicitaEtiquetasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.solicitaPLPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.solicitarPostagemScolResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.solicitaXmlPlpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.statusCartao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.statusPlp.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.tipoEmbalagem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.valePostal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.validaEtiquetaPLPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.validaPlpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.validarPostagemReversaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.validarPostagemSimultaneaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.verificaDisponibilidadeServicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.verificaModalTransporteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\Correios\ProjConsultorio.Correios.VerificaSeTodosObjetosCanceladosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="DbConsultorioDataSet.xsc">
       <DependentUpon>DbConsultorioDataSet.xsd</DependentUpon>
     </None>
@@ -140,6 +427,72 @@
     </None>
     <None Include="DbConsultorioDataSet.xss">
       <DependentUpon>DbConsultorioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DbConsultorioDataSet1.xsc">
+      <DependentUpon>DbConsultorioDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DbConsultorioDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbConsultorioDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbConsultorioDataSet1.xss">
+      <DependentUpon>DbConsultorioDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DbConsultorioDataSet2.xsc">
+      <DependentUpon>DbConsultorioDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DbConsultorioDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbConsultorioDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbConsultorioDataSet2.xss">
+      <DependentUpon>DbConsultorioDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DbConsultorioDataSet3.xsc">
+      <DependentUpon>DbConsultorioDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DbConsultorioDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbConsultorioDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbConsultorioDataSet3.xss">
+      <DependentUpon>DbConsultorioDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DbConsultorioDataSet4.xsc">
+      <DependentUpon>DbConsultorioDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DbConsultorioDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbConsultorioDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbConsultorioDataSet4.xss">
+      <DependentUpon>DbConsultorioDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DbConsultorioDataSet5.xsc">
+      <DependentUpon>DbConsultorioDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DbConsultorioDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbConsultorioDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbConsultorioDataSet5.xss">
+      <DependentUpon>DbConsultorioDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DbConsultorioDataSet6.xsc">
+      <DependentUpon>DbConsultorioDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DbConsultorioDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbConsultorioDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DbConsultorioDataSet6.xss">
+      <DependentUpon>DbConsultorioDataSet6.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -155,7 +508,24 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\Correios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Correios\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Correios\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\Correios\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
